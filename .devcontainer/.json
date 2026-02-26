@@ -1,0 +1,26 @@
+{
+  "name": "Flutter Android Dev",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/flutter:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17"
+    },
+    "ghcr.io/devcontainers/features/android-sdk:1": {
+      "version": "latest",
+      "packages": "platform-tools platforms;android-33 build-tools;33.0.2"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dart-code.dart-code",
+        "dart-code.flutter"
+      ]
+    }
+  },
+  "postCreateCommand": "flutter config --enable-web && yes | sdkmanager --licenses"
+}
+``
